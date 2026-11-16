@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>六 Bot 团队接管网店两天实测：老板 Bot 拍板、页面 Bot 定时发品、广告 Bot 清旧广告 - Grok Bot 实战案例库</title>
+  <meta name="description" content="看看一个人怎么用六个分工 Bot 跑网店的选品、货源、发品和广告，以及它真实卡住的地方——没有销售数据就直说没有。">
+  <link rel="canonical" href="https://grokbot.itis.chat/case/9/">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../grokbot-icon.svg">
+  <meta name="theme-color" content="#0a0c0a">
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="六 Bot 团队接管网店两天实测：老板 Bot 拍板、页面 Bot 定时发品、广告 Bot 清旧广告 - Grok Bot 实战案例">
+  <meta property="og:description" content="看看一个人怎么用六个分工 Bot 跑网店的选品、货源、发品和广告，以及它真实卡住的地方——没有销售数据就直说没有。">
+  <meta property="og:url" content="https://grokbot.itis.chat/case/9/">
+  <meta property="og:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="六 Bot 团队接管网店两天实测：老板 Bot 拍板、页面 Bot 定时发品、广告 Bot 清旧广告">
+  <meta name="twitter:description" content="看看一个人怎么用六个分工 Bot 跑网店的选品、货源、发品和广告，以及它真实卡住的地方——没有销售数据就直说没有。">
+  <meta name="twitter:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <link rel="stylesheet" href="../../style.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "六 Bot 团队接管网店两天实测：老板 Bot 拍板、页面 Bot 定时发品、广告 Bot 清旧广告",
+  "description": "看看一个人怎么用六个分工 Bot 跑网店的选品、货源、发品和广告，以及它真实卡住的地方——没有销售数据就直说没有。",
+  "articleSection": "工作效率与生意",
+  "url": "https://grokbot.itis.chat/case/9/",
+  "datePublished": "2026-11-08",
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Person",
+    "name": "Janek Zarin / Axagen（DEV Community）"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "博客"
+  }
+}
+  </script>
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="app-container">
+    <header class="site-header">
+      <div class="header-main">
+        <div class="brand-wrap">
+          <a href="../../" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+            <div class="monimuse-avatar-wrap" title="Grok Bot">
+              <img src="../../grokbot-icon.svg" width="44" height="44" alt="Grok Bot" style="border-radius: 12px;">
+            </div>
+            <div>
+              <div class="site-title">Grok Bot 实战案例库</div>
+              <div class="site-subtitle">Grok Bot 真实用户案例与复现指南</div>
+            </div>
+          </a>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="../../" class="btn btn-outline" style="font-size: 0.84rem;">&larr; 返回案例库大盘</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="featured-card" style="margin-bottom: 30px;">
+        <div class="featured-top-row">
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span class="badge badge-cat">工作效率与生意 · 进阶</span>
+            <span class="badge badge-grade">Grade B</span>
+            <span class="stat-tag stat-score">★ 评分 80</span>
+            <span class="stat-tag stat-heat">🔥 热度 52</span>
+            <span class="stat-tag">📅 期次 2026-11-08</span>
+          </div>
+        </div>
+
+        <div class="detail-flow">
+          <div class="detail-header">
+            <h1 class="detail-title" style="margin-top: 10px; cursor: default;">六 Bot 团队接管网店两天实测：老板 Bot 拍板、页面 Bot 定时发品、广告 Bot 清旧广告</h1>
+            <div class="detail-valueline">看看一个人怎么用六个分工 Bot 跑网店的选品、货源、发品和广告，以及它真实卡住的地方——没有销售数据就直说没有。</div>
+          </div>
+
+          <!-- 任务背景 -->
+          <div class="detail-section">
+            <div class="detail-label">任务背景</div>
+            <div class="detail-text">作者运营一个网店，想验证 Grok Bot 是不是玩具：设一次、Bot 自己持续干，而不是每次都要他下命令。他另有一个 Axagen 副业也要 Bot 帮忙管邮箱和社区。</div>
+          </div>
+
+          <!-- 步骤 -->
+          
+      <div class="detail-section">
+        <div class="detail-label">做法步骤 (4 步)</div>
+        <ol class="steps-clean-list">
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">1.</span>
+              <span class="step-clean-text">装 Grok Bot 桌面端开免费试用（需绑卡验证），按一岗一 Bot 建：名字、头像、标签（营销/行政/研究）和职责描述，描述也可以直接在聊天里说给 Bot、它自己填</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">2.</span>
+              <span class="step-clean-text">让 Bot 互相认识：在聊天里告诉它另一个 Bot 是谁、是它的伙伴，两个老板 Bot 置顶方便找</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">3.</span>
+              <span class="step-clean-text">组网店团队：Mano Master 老板 Bot 看网站拍板产品上不上架；Facebook 页面 Bot 设定例行，工作日 10:00 和 16:00 检查网站新品并自动发帖、删差评；Facebook 广告 Bot 走 Facebook API 接管广告（已让它删掉旧广告，完成得很干净）；选品研究 Bot 去 Facebook 广告库和竞品网站找在卖的产品；AliExpress 货源 Bot 按研究 Bot 给的思路找同类货源（只看对方发来的截图）；Fixer Bot 修网站问题</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">4.</span>
+              <span class="step-clean-text">第二个老板 Bot 在 Plugins 里连 Gmail 和 Google Calendar（点 Authorize 浏览器确认即可），让它读邮件、分析 YouTube 频道、读 Skool 社区给活跃建议</span>
+            </li>
+          
+        </ol>
+      </div>
+    
+
+          <!-- 关键提示词 -->
+          
+
+          <!-- 产出与证据 -->
+          
+      <div class="detail-section">
+        <div class="output-callout">
+          <div class="output-callout-label">产出与证据</div>
+          <div class="output-callout-text">两天实测结果表（原文逐项）：本地电脑任务（给录视频的软件做配置）几分钟完成；广告 Bot 删除旧广告完成；页面 Bot 例行已按工作日 10:00/16:00 运行；选品到货源的交接在视频里直播跑通但没当场上架新品；用量表刚重置显示 7%→8%。作者明说销售、流量、广告效果都没测到，不编数字。</div>
+          
+        </div>
+      </div>
+    
+
+          <!-- 复现要点 -->
+          <div class="detail-section">
+            <div class="detail-label">复现要点</div>
+            <div class="detail-text">需要 Grok Bot（免费试用要绑卡）；广告 Bot 建议走 Facebook API 而不是点 Ads Manager 界面；没内置插件的应用可经 Zapier 连接；本文由作者视频整理成文，DEV 页面内嵌完整实测视频可对照。</div>
+          </div>
+
+          <!-- 踩坑提示 -->
+          
+      <div class="detail-section">
+        <div class="pitfalls-callout">
+          <div class="pitfalls-callout-label">踩坑提示</div>
+          <div class="pitfalls-callout-text">原文踩坑：Bot 会被 CAPTCHA 卡住，要自己解完点 I&#39;m done 它才继续；Skool 登录超时需手动重登；搭建期频繁弹审批比较费时；速度比人慢，优势是关机后云端继续跑；各 Bot 登录态实际共享，在一台上登了 Facebook 其他 Bot 也能用，权限别想当然。</div>
+        </div>
+      </div>
+    
+
+          <!-- 信源核对 -->
+          <div class="detail-section" style="margin-top: 6px;">
+            <div class="source-verify-box">
+              <div class="source-meta-left">
+                <span>作者/报道：<strong>Janek Zarin / Axagen（DEV Community）</strong></span>
+                <span>&bull;</span>
+                <span>平台：<strong>博客</strong></span>
+                <span>&bull;</span>
+                <span>信源等级：<strong>Grade B</strong></span>
+                <span>&bull;</span><span>发布日期：2026-10-27</span>
+              </div>
+              
+                <a href="https://dev.to/axagen/i-set-up-grok-bot-as-a-team-of-ai-agents-for-my-web-shop-first-days-and-what-broke-4a38" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.82rem;">
+                  <span>打开原文报道</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              
+            </div>
+          </div>
+
+          <!-- 底部行动 -->
+          <div class="featured-footer" style="margin-top: 24px;">
+            <a href="../../" class="btn btn-outline">&larr; 返回查看全部 32 个实战案例</a>
+            
+              <a href="https://dev.to/axagen/i-set-up-grok-bot-as-a-team-of-ai-agents-for-my-web-shop-first-days-and-what-broke-4a38" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <span>访问原文报道</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <span class="footer-links-label">友情链接：</span>
+          <a href="https://www.moyunews.com/" target="_blank" rel="noopener noreferrer">摸鱼杂货店</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://muse.itis.chat/" target="_blank" rel="noopener noreferrer">Muse实战案例库</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://free.itis.chat/" target="_blank" rel="noopener noreferrer">免费开源数字资源</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://m.ucncn.cn/" target="_blank" rel="noopener noreferrer">搞钱实验室</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://doin.win/" target="_blank" rel="noopener noreferrer">小游戏大全</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://itis.chat/" target="_blank" rel="noopener noreferrer">AI资源导航</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://hao.itis.chat/" target="_blank" rel="noopener noreferrer">薅羊毛日报</a>
+        </div>
+        <p class="footer-source">数据来源：Muse 空间 grok-bot-shi-zhan-an-li-ku 的 getState 结构化导出</p>
+        <p class="footer-note">严格依真实用户报道整理 · 支持本地离线与完整核验</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const copyBtn = document.getElementById('copyPromptBtn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const code = document.getElementById('promptCode').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          const t = document.getElementById('toast');
+          t.textContent = '提示词已复制到剪贴板！';
+          t.classList.add('show');
+          setTimeout(() => t.classList.remove('show'), 2000);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

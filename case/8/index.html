@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>给 Grok Bot 建一个 Learning Scout：按水平和每周 4 小时自动拼学习计划 - Grok Bot 实战案例库</title>
+  <meta name="description" content="把选课这种反复查页面的活做成专职 Bot：给它学员画像和时间预算，它逐页核对级别与时长后交一份不超时的学习计划，还能存成每周例行。">
+  <link rel="canonical" href="https://grokbot.itis.chat/case/8/">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../grokbot-icon.svg">
+  <meta name="theme-color" content="#0a0c0a">
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="给 Grok Bot 建一个 Learning Scout：按水平和每周 4 小时自动拼学习计划 - Grok Bot 实战案例">
+  <meta property="og:description" content="把选课这种反复查页面的活做成专职 Bot：给它学员画像和时间预算，它逐页核对级别与时长后交一份不超时的学习计划，还能存成每周例行。">
+  <meta property="og:url" content="https://grokbot.itis.chat/case/8/">
+  <meta property="og:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="给 Grok Bot 建一个 Learning Scout：按水平和每周 4 小时自动拼学习计划">
+  <meta name="twitter:description" content="把选课这种反复查页面的活做成专职 Bot：给它学员画像和时间预算，它逐页核对级别与时长后交一份不超时的学习计划，还能存成每周例行。">
+  <meta name="twitter:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <link rel="stylesheet" href="../../style.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "给 Grok Bot 建一个 Learning Scout：按水平和每周 4 小时自动拼学习计划",
+  "description": "把选课这种反复查页面的活做成专职 Bot：给它学员画像和时间预算，它逐页核对级别与时长后交一份不超时的学习计划，还能存成每周例行。",
+  "articleSection": "学习与研究",
+  "url": "https://grokbot.itis.chat/case/8/",
+  "datePublished": "2026-11-08",
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Person",
+    "name": "DataCamp 教程团队"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DataCamp"
+  }
+}
+  </script>
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="app-container">
+    <header class="site-header">
+      <div class="header-main">
+        <div class="brand-wrap">
+          <a href="../../" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+            <div class="monimuse-avatar-wrap" title="Grok Bot">
+              <img src="../../grokbot-icon.svg" width="44" height="44" alt="Grok Bot" style="border-radius: 12px;">
+            </div>
+            <div>
+              <div class="site-title">Grok Bot 实战案例库</div>
+              <div class="site-subtitle">Grok Bot 真实用户案例与复现指南</div>
+            </div>
+          </a>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="../../" class="btn btn-outline" style="font-size: 0.84rem;">&larr; 返回案例库大盘</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="featured-card" style="margin-bottom: 30px;">
+        <div class="featured-top-row">
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span class="badge badge-cat">学习与研究 · 入门</span>
+            <span class="badge badge-grade">Grade C</span>
+            <span class="stat-tag stat-score">★ 评分 83</span>
+            <span class="stat-tag stat-heat">🔥 热度 48</span>
+            <span class="stat-tag">📅 期次 2026-11-08</span>
+          </div>
+        </div>
+
+        <div class="detail-flow">
+          <div class="detail-header">
+            <h1 class="detail-title" style="margin-top: 10px; cursor: default;">给 Grok Bot 建一个 Learning Scout：按水平和每周 4 小时自动拼学习计划</h1>
+            <div class="detail-valueline">把选课这种反复查页面的活做成专职 Bot：给它学员画像和时间预算，它逐页核对级别与时长后交一份不超时的学习计划，还能存成每周例行。</div>
+          </div>
+
+          <!-- 任务背景 -->
+          <div class="detail-section">
+            <div class="detail-label">任务背景</div>
+            <div class="detail-text">DataCamp 教程团队实测 Grok Bot 的技能/例行/审批机制，选了一个真实学习场景落地：学员会 Python、懂基本 LLM 概念、刚接触 agent 编排，每周只有 4 小时，而目标轨道总时长 6 小时装不下，需要有人替他挑、排序并卡总时长。</div>
+          </div>
+
+          <!-- 步骤 -->
+          
+      <div class="detail-section">
+        <div class="detail-label">做法步骤 (6 步)</div>
+        <ol class="steps-clean-list">
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">1.</span>
+              <span class="step-clean-text">从 Grok Bot 入口页下载桌面端，用 Cursor 账号登录（Grok Bot 无永久免费档，付费走合资格 Cursor 套餐或 SuperGrok）</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">2.</span>
+              <span class="step-clean-text">New 新建 Bot 命名 Scout，在 Edit Profile 写长期规则：只做 DataCamp 学习内容策展并匹配水平与时间预算；把画像当背景而不是任务、等单独消息再开工；每个候选必须打开它自己的课程页才能推荐；级别和时长照页面原文引用、页面没写就写 not listed；保留来源链接、绝不编课程信息</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">3.</span>
+              <span class="step-clean-text">把易变的学员信息写进云电脑上的 /workspace/learner-profile.md 作为每周运行的事实源（目标、预算、背景、偏好、已学完清单）</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">4.</span>
+              <span class="step-clean-text">发本周任务（原文见关键提问）：要求打开每个候选页核对、总时长不超过 4 小时、从基础到实操排序、每项给标题/类型/级别/时长/链接/适配理由/顺序，最后给总时长和本周目标，做完即停、不许擅自报名</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">5.</span>
+              <span class="step-clean-text">在 Agent Computer 里盯它真的逐页打开核对而不是抄搜索摘要，逐行验收链接、级别、先修和总时长</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">6.</span>
+              <span class="step-clean-text">验收通过后把流程存成技能并挂每周例行，下周只更新画像文件即可重跑</span>
+            </li>
+          
+        </ol>
+      </div>
+    
+
+          <!-- 关键提示词 -->
+          
+      <div class="detail-section">
+        <div class="detail-label">关键提示词 (Prompt)</div>
+        <div class="prompt-box">
+          <div class="prompt-bar">
+            <span>PROMPT TEMPLATE</span>
+            <button class="prompt-copy-btn" id="copyPromptBtn">复制提示词</button>
+          </div>
+          <code class="prompt-code" id="promptCode">Build me a weekly DataCamp learning plan. The learner is comfortable with Python, understands basic LLM concepts, is new to AI agent orchestration, and has 4 hours available this week.</code>
+        </div>
+      </div>
+    
+
+          <!-- 产出与证据 -->
+          
+      <div class="detail-section">
+        <div class="output-callout">
+          <div class="output-callout-label">产出与证据</div>
+          <div class="output-callout-text">实测产出：Scout 返回了一份通过逐页核对的学习计划，含每项资源的标题、类型、页面原文级别与时长、链接、适配理由和学习顺序，总时长卡在 4 小时内并给出本周目标；过程中它打开了 Introduction to AI Agents 页面（页面标 Basic、1 小时 30 分），时长对上了但级别抄错，被作者在验收环节抓出并纠正（原文截图与过程记录为证）。</div>
+          
+        </div>
+      </div>
+    
+
+          <!-- 复现要点 -->
+          <div class="detail-section">
+            <div class="detail-label">复现要点</div>
+            <div class="detail-text">需要 Grok Bot 付费访问（Cursor Pro/Pro+/Ultra、Teams 或 SuperGrok 等，文中称最新公告后 SuperGrok 与 Cursor Pro 均含）；注意 Grok Bot 要求云端数据存储，Cursor 账号开着 Legacy Privacy Mode 会启动不了；研究环节只查公开页面、不需要 DataCamp 登录。</div>
+          </div>
+
+          <!-- 踩坑提示 -->
+          
+      <div class="detail-section">
+        <div class="pitfalls-callout">
+          <div class="pitfalls-callout-label">踩坑提示</div>
+          <div class="pitfalls-callout-text">原文实测踩坑：第一次建 Scout 时它把画像描述当成任务直接开跑、跑出一份无关的 ETL 计划，要重建并补两条等待规则（目标含糊先提问、不许擅自建号/报名/购买）；摘要会过期或漏级别时长，只能用它找候选、结论必须以课程页为准；页面被挡、要登录或出 CAPTCHA 时应让 Bot 停下来叫人接管，且不要把密码粘进聊天；删掉 Bot 不等于清掉共享电脑上的文件和登录态。</div>
+        </div>
+      </div>
+    
+
+          <!-- 信源核对 -->
+          <div class="detail-section" style="margin-top: 6px;">
+            <div class="source-verify-box">
+              <div class="source-meta-left">
+                <span>作者/报道：<strong>DataCamp 教程团队</strong></span>
+                <span>&bull;</span>
+                <span>平台：<strong>DataCamp</strong></span>
+                <span>&bull;</span>
+                <span>信源等级：<strong>Grade C</strong></span>
+                
+              </div>
+              
+                <a href="https://www.datacamp.com/tutorial/grok-bot-tutorial" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.82rem;">
+                  <span>打开原文报道</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              
+            </div>
+          </div>
+
+          <!-- 底部行动 -->
+          <div class="featured-footer" style="margin-top: 24px;">
+            <a href="../../" class="btn btn-outline">&larr; 返回查看全部 32 个实战案例</a>
+            
+              <a href="https://www.datacamp.com/tutorial/grok-bot-tutorial" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <span>访问原文报道</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <span class="footer-links-label">友情链接：</span>
+          <a href="https://www.moyunews.com/" target="_blank" rel="noopener noreferrer">摸鱼杂货店</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://muse.itis.chat/" target="_blank" rel="noopener noreferrer">Muse实战案例库</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://free.itis.chat/" target="_blank" rel="noopener noreferrer">免费开源数字资源</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://m.ucncn.cn/" target="_blank" rel="noopener noreferrer">搞钱实验室</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://doin.win/" target="_blank" rel="noopener noreferrer">小游戏大全</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://itis.chat/" target="_blank" rel="noopener noreferrer">AI资源导航</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://hao.itis.chat/" target="_blank" rel="noopener noreferrer">薅羊毛日报</a>
+        </div>
+        <p class="footer-source">数据来源：Muse 空间 grok-bot-shi-zhan-an-li-ku 的 getState 结构化导出</p>
+        <p class="footer-note">严格依真实用户报道整理 · 支持本地离线与完整核验</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const copyBtn = document.getElementById('copyPromptBtn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const code = document.getElementById('promptCode').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          const t = document.getElementById('toast');
+          t.textContent = '提示词已复制到剪贴板！';
+          t.classList.add('show');
+          setTimeout(() => t.classList.remove('show'), 2000);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>16 个 Grok Bot 编排编程 agent 一周合并 78 个 PR，又因烧钱停用 - Grok Bot 实战案例库</title>
+  <meta name="description" content="学会用 webhook+例行把编程线程的盯梢工作交给 Bot 团队：作者一周合并 PR 数从历史最佳 35 个涨到 78 个，也学到了成本失控的边界。">
+  <link rel="canonical" href="https://grokbot.itis.chat/case/4/">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../grokbot-icon.svg">
+  <meta name="theme-color" content="#0a0c0a">
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="16 个 Grok Bot 编排编程 agent 一周合并 78 个 PR，又因烧钱停用 - Grok Bot 实战案例">
+  <meta property="og:description" content="学会用 webhook+例行把编程线程的盯梢工作交给 Bot 团队：作者一周合并 PR 数从历史最佳 35 个涨到 78 个，也学到了成本失控的边界。">
+  <meta property="og:url" content="https://grokbot.itis.chat/case/4/">
+  <meta property="og:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="16 个 Grok Bot 编排编程 agent 一周合并 78 个 PR，又因烧钱停用">
+  <meta name="twitter:description" content="学会用 webhook+例行把编程线程的盯梢工作交给 Bot 团队：作者一周合并 PR 数从历史最佳 35 个涨到 78 个，也学到了成本失控的边界。">
+  <meta name="twitter:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <link rel="stylesheet" href="../../style.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "16 个 Grok Bot 编排编程 agent 一周合并 78 个 PR，又因烧钱停用",
+  "description": "学会用 webhook+例行把编程线程的盯梢工作交给 Bot 团队：作者一周合并 PR 数从历史最佳 35 个涨到 78 个，也学到了成本失控的边界。",
+  "articleSection": "编程与技术问答",
+  "url": "https://grokbot.itis.chat/case/4/",
+  "datePublished": "2026-11-08",
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Person",
+    "name": "Builder.io 博客（作者为 Builder 团队成员）"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "博客"
+  }
+}
+  </script>
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="app-container">
+    <header class="site-header">
+      <div class="header-main">
+        <div class="brand-wrap">
+          <a href="../../" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+            <div class="monimuse-avatar-wrap" title="Grok Bot">
+              <img src="../../grokbot-icon.svg" width="44" height="44" alt="Grok Bot" style="border-radius: 12px;">
+            </div>
+            <div>
+              <div class="site-title">Grok Bot 实战案例库</div>
+              <div class="site-subtitle">Grok Bot 真实用户案例与复现指南</div>
+            </div>
+          </a>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="../../" class="btn btn-outline" style="font-size: 0.84rem;">&larr; 返回案例库大盘</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="featured-card" style="margin-bottom: 30px;">
+        <div class="featured-top-row">
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span class="badge badge-cat">编程与技术问答 · 高阶</span>
+            <span class="badge badge-grade">Grade B</span>
+            <span class="stat-tag stat-score">★ 评分 88</span>
+            <span class="stat-tag stat-heat">🔥 热度 72</span>
+            <span class="stat-tag">📅 期次 2026-11-08</span>
+          </div>
+        </div>
+
+        <div class="detail-flow">
+          <div class="detail-header">
+            <h1 class="detail-title" style="margin-top: 10px; cursor: default;">16 个 Grok Bot 编排编程 agent 一周合并 78 个 PR，又因烧钱停用</h1>
+            <div class="detail-valueline">学会用 webhook+例行把编程线程的盯梢工作交给 Bot 团队：作者一周合并 PR 数从历史最佳 35 个涨到 78 个，也学到了成本失控的边界。</div>
+          </div>
+
+          <!-- 任务背景 -->
+          <div class="detail-section">
+            <div class="detail-label">任务背景</div>
+            <div class="detail-text">作者写代码用 T3 Code（并排跑 Claude Code 与 Codex 线程），真正磨人的是编程之外的事：哪些 PR 在等评审、昨晚跑完了什么、接下来做什么。他想把这份心智负担交给一支常驻 Bot 团队。</div>
+          </div>
+
+          <!-- 步骤 -->
+          
+      <div class="detail-section">
+        <div class="detail-label">做法步骤 (5 步)</div>
+        <ol class="steps-clean-list">
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">1.</span>
+              <span class="step-clean-text">在 Grok Bot 里按工作领域建 16 个 Bot（Inbox、GitHub、Bugs、Blog、Research 等），另设 Config Bot 专门配置其他 Bot、Vault Bot 独占笔记写入权</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">2.</span>
+              <span class="step-clean-text">项目需要多人协作时把相关 Bot 拉进群聊，声明本群只做这个项目</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">3.</span>
+              <span class="step-clean-text">本地写一个无 AI 的小脚本：编程线程完成/失败/需要人时 ping GrokBot 的 webhook，唤醒 T3 Code Bot 来通知或反向操作，避免把本机经公网隧道暴露</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">4.</span>
+              <span class="step-clean-text">设两条例行扛主力：GitHub Bot 盯 PR，评审一通过就通知对应编程线程去落地（它自己从不合并，有个 PR 在通过后 2 分钟就落地）</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">5.</span>
+              <span class="step-clean-text">每个工作日三次，Inbox/日历/日志 Bot 汇总所见，Vault Bot 整理成排好序的优先级看板</span>
+            </li>
+          
+        </ol>
+      </div>
+    
+
+          <!-- 关键提示词 -->
+          
+
+          <!-- 产出与证据 -->
+          
+      <div class="detail-section">
+        <div class="output-callout">
+          <div class="output-callout-label">产出与证据</div>
+          <div class="output-callout-text">一周内作者与 Bot 团队配合合并了 78 个 pull request（其历史最佳是 35 个）；优先级看板落在文档应用里随时可查，原文配有 10 月 9 日当天 24 个编程线程的通知送达情况图（17 个准时、3 个迟到、4 个从没通知）。</div>
+          
+        </div>
+      </div>
+    
+
+          <!-- 复现要点 -->
+          <div class="detail-section">
+            <div class="detail-label">复现要点</div>
+            <div class="detail-text">需要 Grok Bot 付费套餐（作者当时已升到 200 美元档）加自己的编程 agent 工具；关键技巧是事件走 webhook 唤醒、不要用定时轮询，且先给事件加一层普通代码过滤器再唤醒 Bot。</div>
+          </div>
+
+          <!-- 踩坑提示 -->
+          
+      <div class="detail-section">
+        <div class="pitfalls-callout">
+          <div class="pitfalls-callout-label">踩坑提示</div>
+          <div class="pitfalls-callout-text">原文重点踩坑：周末无人时通知器每个事件都唤醒 Bot、Bot 思考后决定没什么可说的，一周末烧掉 100 美元并撞停支出上限、所有例行和 webhook 随之失效；设计好的过滤器（可砍约 80% 流量）Bot 建好了却没人启用，事件继续每天唤醒 Bot 500–750 次；云电脑闲置会休眠，定时任务迟到 12–80 分钟；10 月 9 日 24 个线程完成只通知了 20 个。作者最终停用整套系统。</div>
+        </div>
+      </div>
+    
+
+          <!-- 信源核对 -->
+          <div class="detail-section" style="margin-top: 6px;">
+            <div class="source-verify-box">
+              <div class="source-meta-left">
+                <span>作者/报道：<strong>Builder.io 博客（作者为 Builder 团队成员）</strong></span>
+                <span>&bull;</span>
+                <span>平台：<strong>博客</strong></span>
+                <span>&bull;</span>
+                <span>信源等级：<strong>Grade B</strong></span>
+                <span>&bull;</span><span>发布日期：2026-10-15</span>
+              </div>
+              
+                <a href="https://site.builder.io/blog/grokbot-review" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.82rem;">
+                  <span>打开原文报道</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              
+            </div>
+          </div>
+
+          <!-- 底部行动 -->
+          <div class="featured-footer" style="margin-top: 24px;">
+            <a href="../../" class="btn btn-outline">&larr; 返回查看全部 32 个实战案例</a>
+            
+              <a href="https://site.builder.io/blog/grokbot-review" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <span>访问原文报道</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <span class="footer-links-label">友情链接：</span>
+          <a href="https://www.moyunews.com/" target="_blank" rel="noopener noreferrer">摸鱼杂货店</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://muse.itis.chat/" target="_blank" rel="noopener noreferrer">Muse实战案例库</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://free.itis.chat/" target="_blank" rel="noopener noreferrer">免费开源数字资源</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://m.ucncn.cn/" target="_blank" rel="noopener noreferrer">搞钱实验室</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://doin.win/" target="_blank" rel="noopener noreferrer">小游戏大全</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://itis.chat/" target="_blank" rel="noopener noreferrer">AI资源导航</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://hao.itis.chat/" target="_blank" rel="noopener noreferrer">薅羊毛日报</a>
+        </div>
+        <p class="footer-source">数据来源：Muse 空间 grok-bot-shi-zhan-an-li-ku 的 getState 结构化导出</p>
+        <p class="footer-note">严格依真实用户报道整理 · 支持本地离线与完整核验</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const copyBtn = document.getElementById('copyPromptBtn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const code = document.getElementById('promptCode').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          const t = document.getElementById('toast');
+          t.textContent = '提示词已复制到剪贴板！';
+          t.classList.add('show');
+          setTimeout(() => t.classList.remove('show'), 2000);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

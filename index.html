@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- Google SEO 核心元标签 -->
+  <title>Grok Bot 实战案例库 - 真实用户案例、现成Prompt与复现指南</title>
+  <meta name="description" content="收录 32 个 Grok Bot（xAI @bot / @grok）真实用户实战案例，涵盖 Bot 团队运营、编程 agent 编排、图片视频生成、@grok 事实核查与网店运营。提供现成 Prompt 提示词与原始报道核对链接。">
+  <meta name="keywords" content="Grok Bot, Grok Bot实战, Grok Bot案例, @grok, @bot, xAI, Grok Bot prompt, AI代理, Bot团队, AI提效">
+  <meta name="author" content="Grok Bot 实战案例库">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://grokbot.itis.chat/">
+  <link rel="alternate" hreflang="zh-CN" href="https://grokbot.itis.chat/">
+  <link rel="alternate" hreflang="en" href="https://grokbot.itis.chat/en/">
+  <link rel="alternate" hreflang="x-default" href="https://grokbot.itis.chat/">
+
+  <!-- 图标体系 (Monimuse) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="grokbot-icon.svg">
+  <meta name="theme-color" content="#0a0c0a">
+
+  <!-- Open Graph 社交与搜索引擎预览 -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="Grok Bot 实战案例库">
+  <meta property="og:title" content="Grok Bot 实战案例库 - 真实用户案例、现成Prompt与复现指南">
+  <meta property="og:description" content="真实用户亲测 Grok Bot 实战案例，带复现要点、踩坑提示与原始报道核对链接。">
+  <meta property="og:url" content="https://grokbot.itis.chat/">
+  <meta property="og:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grok Bot 实战案例库">
+  <meta name="twitter:description" content="真实用户亲测 Grok Bot 实战案例，带现成 Prompt、避坑提示与原始信源核对。">
+  <meta name="twitter:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google 结构化数据 (Schema.org JSON-LD): WebSite + ItemList + FAQPage -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://grokbot.itis.chat/#website",
+      "url": "https://grokbot.itis.chat/",
+      "name": "Grok Bot 实战案例库",
+      "description": "xAI Grok Bot（@bot / @grok）真实用户实战案例",
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://grokbot.itis.chat/#collection",
+      "url": "https://grokbot.itis.chat/",
+      "name": "Grok Bot 实战案例库 - 真实用户案例与复现指南",
+      "description": "xAI Grok Bot（@bot / @grok）真实用户实战案例",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "三人 Bot 团队三天把一个产品想法做成上线应用 Quiet Desk",
+              "description": "照着 PM/Design/QA 三 Bot 分工和现成角色 prompt，一个人也能把想法推到上线，只需回 yes/no 做审批。",
+              "articleSection": "编程与技术问答",
+              "url": "https://grokbot.itis.chat/case/1/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Adam Faik（The AI Thinker）"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Substack"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "非程序员 Uber 司机让 Grok Bot 建了自己的接单数据库：1.1 万张报价截图可自然语言查询",
+              "description": "把平台报价截图和收入导出喂给 Grok Bot 建库去重配对，普通司机也能用大白话查哪个时段、哪类单真正赚钱。",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/2/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Levi Spires"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "让 Grok Bot 读代码库批量生图：两小时生成 74 张游戏卡牌素材并接回游戏",
+              "description": "把占位图清理这种逐张手活整包交给 Bot：它自己读代码搞清每张图是什么、逐张写 prompt 生图、裁成透明 PNG 再接回工程。",
+              "articleSection": "图片生成与编辑",
+              "url": "https://grokbot.itis.chat/case/3/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Danny Limanseta（@DannyLimanseta），经 Agents In Use 整理核对"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "X"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "16 个 Grok Bot 编排编程 agent 一周合并 78 个 PR，又因烧钱停用",
+              "description": "学会用 webhook+例行把编程线程的盯梢工作交给 Bot 团队：作者一周合并 PR 数从历史最佳 35 个涨到 78 个，也学到了成本失控的边界。",
+              "articleSection": "编程与技术问答",
+              "url": "https://grokbot.itis.chat/case/4/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Builder.io 博客（作者为 Builder 团队成员）"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "五周实战：从 Chief of Staff 到 Bot 团队，把品牌合作邮件和内容例行交给 Grok Bot",
+              "description": "照七级路线搭：先一个会反问的首席幕僚 Bot、再关发送权、设 ask first、把重复活存成技能上例行，小生意就能稳稳外包一块运营。",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/5/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Brooke Wright（Wright Mode）"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "用一队 Grok Bot 运营个人博客一周：发 2 篇带计算器的文章和一条 34 秒视频",
+              "description": "给 Bot 团队里专门留一个唱反调的角色，能在一周内稳稳产出可直接上线的文章、封面和视频，且错误在发布前被同伴揪出。",
+              "articleSection": "内容创作与文案",
+              "url": "https://grokbot.itis.chat/case/6/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Cristian Gómez（mrgomez.net）"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "官方指南：一个项目一个频道，用 projects Manager Bot 统管多支 Grok Bot 团队",
+              "description": "多项目并行时照这套一项目一频道一名单的结构搭，Bot 卡住会自己标 Blocked 并在频道里 @ 你，不用挨个聊天窗口巡逻。",
+              "articleSection": "趣味整活与高阶玩法",
+              "url": "https://grokbot.itis.chat/case/7/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Eric Zakariasson（xAI Grok Bot Guides）"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "xAI 官网"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "给 Grok Bot 建一个 Learning Scout：按水平和每周 4 小时自动拼学习计划",
+              "description": "把选课这种反复查页面的活做成专职 Bot：给它学员画像和时间预算，它逐页核对级别与时长后交一份不超时的学习计划，还能存成每周例行。",
+              "articleSection": "学习与研究",
+              "url": "https://grokbot.itis.chat/case/8/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "DataCamp 教程团队"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "DataCamp"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "六 Bot 团队接管网店两天实测：老板 Bot 拍板、页面 Bot 定时发品、广告 Bot 清旧广告",
+              "description": "看看一个人怎么用六个分工 Bot 跑网店的选品、货源、发品和广告，以及它真实卡住的地方——没有销售数据就直说没有。",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/9/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Janek Zarin / Axagen（DEV Community）"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Newsly 新闻 Bot + Scriptly 脚本 Bot 接力：每日 AI 新闻简报自动变口播脚本",
+              "description": "用两个 Bot 接力把每天看新闻这件事流水线化：一个收新闻进表格，一个把研究直接改成脚本，人只在群里验收。",
+              "articleSection": "新闻与热点解读",
+              "url": "https://grokbot.itis.chat/case/10/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Papa React（Sonny Sangha）"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "YouTube"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "用 Grok Bot 做 X 内容增长例行：24 小时爆款扫描、五角度改稿与发布后复盘",
+              "description": "把找选题从刷时间线变成 Bot 的每日例行：先看赛道里真正跑出来的帖、存原链接拆钩子，再让 Bot 出角度、发完回收数据复盘。",
+              "articleSection": "内容创作与文案",
+              "url": "https://grokbot.itis.chat/case/11/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Steal What Works"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "@grok 核查翻车实录：用户问爆款照片多老，Grok 咬定是昨天的新闻图",
+              "description": "这是 @grok 事实核查最典型的用法、也是最值得记的一课：问法极简单，但 Bot 会顺着假帖编出细节，重要信息必须再用反向搜图等可靠方法复核。",
+              "articleSection": "事实核查与辟谣",
+              "url": "https://grokbot.itis.chat/case/12/",
+              "datePublished": "2026-11-08",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Africa Check"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Africa Check"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "从 189 个仓库里挑出 20 件 Grok Bot 开源装备：联网、邮件、桥接、保活与中文配方一次配齐",
+              "description": "不用自己翻 GitHub：这份清单把能直接给 Grok Bot 加能力的社区项目按痛点分好了类，先挑一件装上、派个有明确终点的活跑通再说。",
+              "articleSection": "趣味整活与高阶玩法",
+              "url": "https://grokbot.itis.chat/case/13/",
+              "datePublished": "2026-11-09",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "雨哥向前冲（@xiangxiang103）"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "X"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "花店老板用 Grok Bot 组 12 人 AI 团队",
+              "description": "一人开两家店也能有团队：每个 Bot 一个岗位，只出草稿等人批。",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/14/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Tye Gordon"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Grok Bot 团队成员 11 条建队心得：一夜 90 万浏览",
+              "description": "别再堆 Bot 数量：少量好 Bot 加自写技能加慢例行，才是官方团队自己的管法。",
+              "articleSection": "学习与研究",
+              "url": "https://grokbot.itis.chat/case/15/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "ExplainX"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 16,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Peter Yang：@bot 把数千条剧评变口味档案",
+              "description": "看到好帖不用收藏吃灰：@bot 一句变成可复用的研究任务。",
+              "articleSection": "新闻与热点解读",
+              "url": "https://grokbot.itis.chat/case/16/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Peter Yang"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 17,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "一句话建 Lead Finder：Grok Bot 接 Firecrawl 出线索表",
+              "description": "不用买线索工具：一个 Bot 加免费 Firecrawl，把某地某行业变成带决策人的表格。",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/17/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Firecrawl"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "YouTube"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "@bot 汇总帖子回复：12 站共省约 9.49MB",
+              "description": "在原帖下 @bot 一句，把散在回复里的省流数字汇总成表。",
+              "articleSection": "学习与研究",
+              "url": "https://grokbot.itis.chat/case/18/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Bot Pages"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 19,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "30 美元搭 6 人投放团队：3 投手各盯一渠道",
+              "description": "多 Bot 协作经典演示：分工写死、群聊 @ 交接，一人跑起跨渠道监测。",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/19/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Affnomy"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "@grok 把空军人潮判成旧庙会照，BOOM 纠错",
+              "description": "反面教材：@grok 的核查也会错，关键结论须回到一手信源复核。",
+              "articleSection": "事实核查与辟谣",
+              "url": "https://grokbot.itis.chat/case/20/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "BOOM FactCheck"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "BOOM"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Grok Bot 每天发 10 封冷邮件：前两版翻车才像人写",
+              "description": "真实翻车记录：别让 Bot 直接发，先锁死纯文本模板、拿自己邮箱测三轮。",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/21/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "axagen"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "DEV Community"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 22,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "@grok 核查科利点赞《罗摩衍那》截图：伪造",
+              "description": "疯传的球星截图是真是假？帖子下 @grok 问一句，再对照本人账号验证。",
+              "articleSection": "事实核查与辟谣",
+              "url": "https://grokbot.itis.chat/case/22/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "NDTV Profit"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "NDTV Profit"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 23,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Grok Bot 独立做了一款新扑克：亮一张底牌定胜负",
+              "description": "把规则脑洞交给 Grok Bot：它能独立做出可玩、可测试的完整网页游戏。",
+              "articleSection": "趣味整活与高阶玩法",
+              "url": "https://grokbot.itis.chat/case/23/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "SomilAgg123"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "GitHub"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 24,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Clip Bot：丢 YouTube 链接，Grok Bot 帮你剪短视频",
+              "description": "长播客长访谈不用逐帧找：丢链接给 Clip Bot，先给候选时间点与文案再剪。",
+              "articleSection": "视频生成",
+              "url": "https://grokbot.itis.chat/case/24/",
+              "datePublished": "2026-11-10",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "UseBot"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 25,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "133张家庭照片零剪辑做成50岁生日视频",
+              "description": "多源照片经Bot处理，8版迭代成9分钟视频",
+              "articleSection": "视频生成",
+              "url": "https://grokbot.itis.chat/case/25/",
+              "datePublished": "2026-11-13",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Debs O'Brien"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "博客"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 26,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "推着双胞胎散步，语音指挥Grok Bot完成一整单超市网购",
+              "description": "语音指挥Bot购物、核对、支付",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/26/",
+              "datePublished": "2026-11-13",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Debs O'Brien"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "DEV Community"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 27,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "6个Grok Bot串联成开发流水线，累计产出1000+个PR",
+              "description": "六Bot接力，终点是Draft PR",
+              "articleSection": "编程与技术问答",
+              "url": "https://grokbot.itis.chat/case/27/",
+              "datePublished": "2026-11-13",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "AgentUseCases"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "AgentUseCases"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 28,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Grok Bot 1.0：Bot进会议，替你参会并输出结构化纪要",
+              "description": "会后发3个决定、负责人与截止日期",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/28/",
+              "datePublished": "2026-11-13",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Panke 日报"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Panke"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 29,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "用Grok Bot造企鹅Noot：自建网站、游戏与宣传片",
+              "description": "一个Bot自主完成网站、游戏、宣传视频",
+              "articleSection": "趣味整活与高阶玩法",
+              "url": "https://grokbot.itis.chat/case/29/",
+              "datePublished": "2026-11-13",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Bot Pages"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Bot Pages"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 30,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Grok Bot端到端运行客服公司：14条工作流撑起55个客户",
+              "description": "14条工作流跑通客服，人只留获客与电话升级",
+              "articleSection": "工作效率与生意",
+              "url": "https://grokbot.itis.chat/case/30/",
+              "datePublished": "2026-11-13",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "AgentUseCases"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "AgentUseCases"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 31,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "一句「删掉假神」，@grok编辑图片只剩耶稣一人",
+              "description": "一句短指令完成图片编辑",
+              "articleSection": "图片生成与编辑",
+              "url": "https://grokbot.itis.chat/case/31/",
+              "datePublished": "2026-11-13",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Answered Faith"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Answered Faith"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 32,
+            "item": {
+              "@type": "TechArticle",
+              "headline": "Grok Bot通过Postiz插件自动发布Instagram内容",
+              "description": "配置API Key后排期自动发布",
+              "articleSection": "内容创作与文案",
+              "url": "https://grokbot.itis.chat/case/32/",
+              "datePublished": "2026-11-13",
+              "inLanguage": "zh-CN",
+              "author": {
+                "@type": "Person",
+                "name": "Postiz"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Postiz 官网"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Grok Bot 实战案例库收录了哪些主要场景？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "涵盖花店老板组 12 人 Bot 团队、16 个 Bot 编排编程 agent 一周合并 78 个 PR、133 张家庭照片零剪辑做成生日视频、@grok 事实核查实录等真实场景。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "案例库的提示词和数据真实吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "所有案例均来自一手报道与测试作者，保留信源评级与原始文章核对链接，不编造、不夸大。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <!-- 背景氛围光晕效果 (极淡沉静暖光) -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- 页面主体容器 -->
+  <div class="app-container">
+    
+    <!-- 顶部导航与 Header -->
+    <header class="site-header">
+      <div class="header-main">
+        <div class="brand-wrap">
+          <!-- Monimuse 灵动专属吉祥物 Logo -->
+          <div class="monimuse-avatar-wrap" title="Grok Bot 实战案例库">
+            <svg class="monimuse-avatar" viewBox="0 0 120 120" width="46" height="46">
+              <rect x="14" y="14" width="92" height="92" rx="24" fill="#10130c"/>
+              <circle cx="60" cy="26" r="5" fill="#a3e635"/>
+              <line x1="60" y1="31" x2="60" y2="40" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="46" cy="62" rx="5" ry="7" fill="#a3e635"/>
+              <ellipse cx="74" cy="62" rx="5" ry="7" fill="#a3e635"/>
+              <path d="M48,80 Q60,88 72,80" fill="none" stroke="#a3e635" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h1 class="site-title" id="siteTitle">Grok Bot 实战案例库</h1>
+            <p class="site-subtitle" id="siteSubject">xAI Grok Bot（@bot / @grok）真实用户实战案例</p>
+          </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <!-- 语言切换开关 CH / EN -->
+          <div class="lang-switch-wrap" role="group" aria-label="语言切换 Language Switcher">
+            <button class="lang-btn active" id="langZhBtn" data-lang="zh" title="切换到中文">CH</button>
+            <span class="lang-sep">/</span>
+            <button class="lang-btn" id="langEnBtn" data-lang="en" title="Switch to English">EN</button>
+          </div>
+
+          <!-- 统计面板 -->
+          <div class="stats-panel" id="statsPanel">
+            <div class="stat-item">
+              <span class="stat-num" id="statTotalCases">12</span>
+              <span class="stat-label" id="statTotalCasesLabel">实战案例</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" id="statCategories">9</span>
+              <span class="stat-label" id="statCategoriesLabel">分类覆盖</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" id="statLatestDate">2026-11-08</span>
+              <span class="stat-label" id="statLatestDateLabel">最新期次</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 本期头条 (Featured) -->
+    <section class="section-featured" id="featuredSection" aria-label="本期头条案例">
+      <!-- 动态填充 -->
+    </section>
+
+    <!-- 热门榜 Top 5 -->
+    <section class="section-trending" aria-label="热门榜 Top 5">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <span class="section-icon">🔥</span>
+          <h2 class="section-title">热门榜 Top 5</h2>
+          <span class="section-hint">按用户热度综合排序</span>
+        </div>
+      </div>
+      <div class="trending-grid" id="trendingGrid">
+        <!-- 动态填充 5 条 -->
+      </div>
+    </section>
+
+    <!-- 主浏览与交互工具栏 -->
+    <section class="section-main">
+      <div class="toolbar" id="toolbar">
+        <!-- 搜索与排序栏 -->
+        <div class="toolbar-top">
+          <div class="search-box">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="searchInput" placeholder="搜索标题、背景、步骤、工具或出处..." autocomplete="off">
+            <button class="clear-search-btn" id="clearSearchBtn" title="清空搜索" style="display: none;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <div class="toolbar-actions">
+            <!-- 排序 -->
+            <div class="select-wrap">
+              <select id="sortSelect">
+                <option value="heat">🔥 按热度从高到低</option>
+                <option value="score">★ 按评分从高到低</option>
+                <option value="newest">🕒 按最新期次</option>
+              </select>
+            </div>
+
+            <!-- 只看收藏 -->
+            <button class="fav-filter-btn" id="favFilterBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <span>只看收藏</span>
+              <span class="fav-count-badge" id="favCountBadge">0</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 分类可横滑筛选条 -->
+        <div class="category-tabs-wrapper">
+          <div class="category-tabs" id="categoryTabs">
+            <!-- 动态生成分类按钮 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 案例网格统计与视图 -->
+      <div class="grid-status-bar">
+        <span class="results-count" id="resultsCount">展示 12 个案例</span>
+        <button class="reset-filter-link" id="resetFilterLink" style="display: none;">重置所有筛选</button>
+      </div>
+
+      <!-- 案例网格 (预置符合 Google 爬虫直读的语义化结构，JS 加载后接管交互) -->
+      <div class="cases-grid" id="casesGrid">
+        <!-- 默认由 app.js 渲染 -->
+      </div>
+
+      <!-- 分页控件容器 (每页60项自动分页) -->
+      <div class="pagination-wrap" id="paginationWrap" style="display: none;"></div>
+
+      <!-- 空结果提示 -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">🔍</div>
+        <h3 class="empty-title">未找到匹配的案例</h3>
+        <p class="empty-desc">尝试更换搜索词、切换分类或取消“只看收藏”</p>
+        <button class="btn btn-outline" id="emptyResetBtn">恢复显示全部案例</button>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <span class="footer-links-label">友情链接：</span>
+          <a href="https://www.moyunews.com/" target="_blank" rel="noopener noreferrer">摸鱼杂货店</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://muse.itis.chat/" target="_blank" rel="noopener noreferrer">Muse实战案例库</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://free.itis.chat/" target="_blank" rel="noopener noreferrer">免费开源数字资源</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://m.ucncn.cn/" target="_blank" rel="noopener noreferrer">搞钱实验室</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://doin.win/" target="_blank" rel="noopener noreferrer">小游戏大全</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://itis.chat/" target="_blank" rel="noopener noreferrer">AI资源导航</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://hao.itis.chat/" target="_blank" rel="noopener noreferrer">薅羊毛日报</a>
+        </div>
+        <p class="footer-source" id="footerSource">数据来源：Muse 空间 muse-shi-zhan-an-li-ku 的 getState 结构化导出</p>
+        <p class="footer-note">所有文案、数据及评分严格以源数据为准 · 支持本地离线存储与核验 · Grok Bot 实战整理</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 详情弹窗 Modal -->
+  <div class="modal-backdrop" id="caseModal" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <div class="modal-header-meta" id="modalMeta">
+          <!-- 标签 -->
+        </div>
+        <div class="modal-header-actions">
+          <button class="btn-icon modal-fav-btn" id="modalFavBtn" title="收藏此案例">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <button class="btn-icon modal-close-btn" id="modalCloseBtn" title="关闭详情 (Esc)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- 动态填充各字段 -->
+      </div>
+
+      <div class="modal-footer" id="modalFooter">
+        <!-- 底部原文跳转与快捷操作 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 吐司通知 Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="data-fallback.js"></script>
+  <script src="data-en-fallback.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

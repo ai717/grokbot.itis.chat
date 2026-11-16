@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Grok Bot 每天发 10 封冷邮件：前两版翻车才像人写 - Grok Bot 实战案例库</title>
+  <meta name="description" content="真实翻车记录：别让 Bot 直接发，先锁死纯文本模板、拿自己邮箱测三轮。">
+  <link rel="canonical" href="https://grokbot.itis.chat/case/21/">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../grokbot-icon.svg">
+  <meta name="theme-color" content="#0a0c0a">
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Grok Bot 每天发 10 封冷邮件：前两版翻车才像人写 - Grok Bot 实战案例">
+  <meta property="og:description" content="真实翻车记录：别让 Bot 直接发，先锁死纯文本模板、拿自己邮箱测三轮。">
+  <meta property="og:url" content="https://grokbot.itis.chat/case/21/">
+  <meta property="og:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Grok Bot 每天发 10 封冷邮件：前两版翻车才像人写">
+  <meta name="twitter:description" content="真实翻车记录：别让 Bot 直接发，先锁死纯文本模板、拿自己邮箱测三轮。">
+  <meta name="twitter:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <link rel="stylesheet" href="../../style.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Grok Bot 每天发 10 封冷邮件：前两版翻车才像人写",
+  "description": "真实翻车记录：别让 Bot 直接发，先锁死纯文本模板、拿自己邮箱测三轮。",
+  "articleSection": "工作效率与生意",
+  "url": "https://grokbot.itis.chat/case/21/",
+  "datePublished": "2026-11-10",
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Person",
+    "name": "axagen"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DEV Community"
+  }
+}
+  </script>
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="app-container">
+    <header class="site-header">
+      <div class="header-main">
+        <div class="brand-wrap">
+          <a href="../../" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+            <div class="monimuse-avatar-wrap" title="Grok Bot">
+              <img src="../../grokbot-icon.svg" width="44" height="44" alt="Grok Bot" style="border-radius: 12px;">
+            </div>
+            <div>
+              <div class="site-title">Grok Bot 实战案例库</div>
+              <div class="site-subtitle">Grok Bot 真实用户案例与复现指南</div>
+            </div>
+          </a>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="../../" class="btn btn-outline" style="font-size: 0.84rem;">&larr; 返回案例库大盘</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="featured-card" style="margin-bottom: 30px;">
+        <div class="featured-top-row">
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span class="badge badge-cat">工作效率与生意 · 进阶</span>
+            <span class="badge badge-grade">Grade B</span>
+            <span class="stat-tag stat-score">★ 评分 79</span>
+            <span class="stat-tag stat-heat">🔥 热度 60</span>
+            <span class="stat-tag">📅 期次 2026-11-10</span>
+          </div>
+        </div>
+
+        <div class="detail-flow">
+          <div class="detail-header">
+            <h1 class="detail-title" style="margin-top: 10px; cursor: default;">Grok Bot 每天发 10 封冷邮件：前两版翻车才像人写</h1>
+            <div class="detail-valueline">真实翻车记录：别让 Bot 直接发，先锁死纯文本模板、拿自己邮箱测三轮。</div>
+          </div>
+
+          <!-- 任务背景 -->
+          <div class="detail-section">
+            <div class="detail-label">任务背景</div>
+            <div class="detail-text">作者想把冷邮件外包给 Grok Bot：每天找 10 家真实小企业、写邮件、发出去，已有免费 Google 地图找线索方法，只想让 Bot 照着跑。</div>
+          </div>
+
+          <!-- 步骤 -->
+          
+      <div class="detail-section">
+        <div class="detail-label">做法步骤 (7 步)</div>
+        <ol class="steps-clean-list">
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">1.</span>
+              <span class="step-clean-text">新建专属 Bot，接 Gmail 插件授权，先热身：读收件箱、删约 5 封垃圾邮件、处理合作邀约只提问不答应</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">2.</span>
+              <span class="step-clean-text">下简报：每天发 10 封冷邮件，面向美国中小企业经理与社媒负责人，先在聊天里写一封示例再动手</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">3.</span>
+              <span class="step-clean-text">Bot 提议接付费 Apollo 插件，作者拒绝，改为给本地找线索项目路径，让它自学免费 Google Maps / Places 方法</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">4.</span>
+              <span class="step-clean-text">下令现在找 10 条真实线索并马上发，首次运行点允许一次，中途遇模型供应商过载报错</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">5.</span>
+              <span class="step-clean-text">检查已发送：第一版排版混乱，第二版成带按钮的简报风</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">6.</span>
+              <span class="step-clean-text">截屏发回要求先给自己发测试邮件改到顺眼，并明确只要普通纯文本</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">7.</span>
+              <span class="step-clean-text">第三版通过后，把找线索与发邮件设为每天自动跑的例行任务。</span>
+            </li>
+          
+        </ol>
+      </div>
+    
+
+          <!-- 关键提示词 -->
+          
+      <div class="detail-section">
+        <div class="detail-label">关键提示词 (Prompt)</div>
+        <div class="prompt-box">
+          <div class="prompt-bar">
+            <span>PROMPT TEMPLATE</span>
+            <button class="prompt-copy-btn" id="copyPromptBtn">复制提示词</button>
+          </div>
+          <code class="prompt-code" id="promptCode">Set me up a cold email campaign to run daily, 10 cold emails. It&#39;s the AI automation niche, and I want to offer something similar to what&#39;s on my website. Before you send anything, write me an example here. Target people in the United States: managers, social media, at not very big companies. Your task is to find those leads yourself. How are you going to do it?</code>
+        </div>
+      </div>
+    
+
+          <!-- 产出与证据 -->
+          
+      <div class="detail-section">
+        <div class="output-callout">
+          <div class="output-callout-label">产出与证据</div>
+          <div class="output-callout-text">最终每天找线索发 10 封冷邮件的自动化跑起来了，第三版为作者认可的普通纯文本。作者明确：本次未统计打开、回复与约会数，是搭建记录不是效果案例。</div>
+          
+            <div style="margin-top: 10px;">
+              <a href="https://www.youtube.com/watch?v=Oy8g3_k2Ios" target="_blank" rel="noopener noreferrer" class="output-callout-link">
+                <span>查看产出链接</span> &rarr;
+              </a>
+            </div>
+          
+        </div>
+      </div>
+    
+
+          <!-- 复现要点 -->
+          <div class="detail-section">
+            <div class="detail-label">复现要点</div>
+            <div class="detail-text">需 Grok Bot 订阅、Gmail 插件与免费找线索方法；第一封简报就写明只用免费工具。</div>
+          </div>
+
+          <!-- 踩坑提示 -->
+          
+      <div class="detail-section">
+        <div class="pitfalls-callout">
+          <div class="pitfalls-callout-label">踩坑提示</div>
+          <div class="pitfalls-callout-text">放任不管时 Bot 默认找付费工具；路径给错浪费一轮；写得好看点是错误指令，冷邮件要普通纯文本；遵守当地邮件营销与反垃圾法规。</div>
+        </div>
+      </div>
+    
+
+          <!-- 信源核对 -->
+          <div class="detail-section" style="margin-top: 6px;">
+            <div class="source-verify-box">
+              <div class="source-meta-left">
+                <span>作者/报道：<strong>axagen</strong></span>
+                <span>&bull;</span>
+                <span>平台：<strong>DEV Community</strong></span>
+                <span>&bull;</span>
+                <span>信源等级：<strong>Grade B</strong></span>
+                <span>&bull;</span><span>发布日期：2026-10-20</span>
+              </div>
+              
+                <a href="http://dev.to/axagen/i-let-an-ai-agent-find-leads-and-send-my-cold-emails-setup-fixes-what-broke-5fc1" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.82rem;">
+                  <span>打开原文报道</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              
+            </div>
+          </div>
+
+          <!-- 底部行动 -->
+          <div class="featured-footer" style="margin-top: 24px;">
+            <a href="../../" class="btn btn-outline">&larr; 返回查看全部 32 个实战案例</a>
+            
+              <a href="http://dev.to/axagen/i-let-an-ai-agent-find-leads-and-send-my-cold-emails-setup-fixes-what-broke-5fc1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <span>访问原文报道</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <span class="footer-links-label">友情链接：</span>
+          <a href="https://www.moyunews.com/" target="_blank" rel="noopener noreferrer">摸鱼杂货店</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://muse.itis.chat/" target="_blank" rel="noopener noreferrer">Muse实战案例库</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://free.itis.chat/" target="_blank" rel="noopener noreferrer">免费开源数字资源</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://m.ucncn.cn/" target="_blank" rel="noopener noreferrer">搞钱实验室</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://doin.win/" target="_blank" rel="noopener noreferrer">小游戏大全</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://itis.chat/" target="_blank" rel="noopener noreferrer">AI资源导航</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://hao.itis.chat/" target="_blank" rel="noopener noreferrer">薅羊毛日报</a>
+        </div>
+        <p class="footer-source">数据来源：Muse 空间 grok-bot-shi-zhan-an-li-ku 的 getState 结构化导出</p>
+        <p class="footer-note">严格依真实用户报道整理 · 支持本地离线与完整核验</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const copyBtn = document.getElementById('copyPromptBtn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const code = document.getElementById('promptCode').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          const t = document.getElementById('toast');
+          t.textContent = '提示词已复制到剪贴板！';
+          t.classList.add('show');
+          setTimeout(() => t.classList.remove('show'), 2000);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

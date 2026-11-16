@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>非程序员 Uber 司机让 Grok Bot 建了自己的接单数据库：1.1 万张报价截图可自然语言查询 - Grok Bot 实战案例库</title>
+  <meta name="description" content="把平台报价截图和收入导出喂给 Grok Bot 建库去重配对，普通司机也能用大白话查哪个时段、哪类单真正赚钱。">
+  <link rel="canonical" href="https://grokbot.itis.chat/case/2/">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../grokbot-icon.svg">
+  <meta name="theme-color" content="#0a0c0a">
+
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="非程序员 Uber 司机让 Grok Bot 建了自己的接单数据库：1.1 万张报价截图可自然语言查询 - Grok Bot 实战案例">
+  <meta property="og:description" content="把平台报价截图和收入导出喂给 Grok Bot 建库去重配对，普通司机也能用大白话查哪个时段、哪类单真正赚钱。">
+  <meta property="og:url" content="https://grokbot.itis.chat/case/2/">
+  <meta property="og:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="非程序员 Uber 司机让 Grok Bot 建了自己的接单数据库：1.1 万张报价截图可自然语言查询">
+  <meta name="twitter:description" content="把平台报价截图和收入导出喂给 Grok Bot 建库去重配对，普通司机也能用大白话查哪个时段、哪类单真正赚钱。">
+  <meta name="twitter:image" content="https://grokbot.itis.chat/grokbot-icon.svg">
+
+  <link rel="stylesheet" href="../../style.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "非程序员 Uber 司机让 Grok Bot 建了自己的接单数据库：1.1 万张报价截图可自然语言查询",
+  "description": "把平台报价截图和收入导出喂给 Grok Bot 建库去重配对，普通司机也能用大白话查哪个时段、哪类单真正赚钱。",
+  "articleSection": "工作效率与生意",
+  "url": "https://grokbot.itis.chat/case/2/",
+  "datePublished": "2026-11-08",
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Person",
+    "name": "Levi Spires"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "博客"
+  }
+}
+  </script>
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <div class="app-container">
+    <header class="site-header">
+      <div class="header-main">
+        <div class="brand-wrap">
+          <a href="../../" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit;">
+            <div class="monimuse-avatar-wrap" title="Grok Bot">
+              <img src="../../grokbot-icon.svg" width="44" height="44" alt="Grok Bot" style="border-radius: 12px;">
+            </div>
+            <div>
+              <div class="site-title">Grok Bot 实战案例库</div>
+              <div class="site-subtitle">Grok Bot 真实用户案例与复现指南</div>
+            </div>
+          </a>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="../../" class="btn btn-outline" style="font-size: 0.84rem;">&larr; 返回案例库大盘</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="featured-card" style="margin-bottom: 30px;">
+        <div class="featured-top-row">
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span class="badge badge-cat">工作效率与生意 · 入门</span>
+            <span class="badge badge-grade">Grade B</span>
+            <span class="stat-tag stat-score">★ 评分 90</span>
+            <span class="stat-tag stat-heat">🔥 热度 58</span>
+            <span class="stat-tag">📅 期次 2026-11-08</span>
+          </div>
+        </div>
+
+        <div class="detail-flow">
+          <div class="detail-header">
+            <h1 class="detail-title" style="margin-top: 10px; cursor: default;">非程序员 Uber 司机让 Grok Bot 建了自己的接单数据库：1.1 万张报价截图可自然语言查询</h1>
+            <div class="detail-valueline">把平台报价截图和收入导出喂给 Grok Bot 建库去重配对，普通司机也能用大白话查哪个时段、哪类单真正赚钱。</div>
+          </div>
+
+          <!-- 任务背景 -->
+          <div class="detail-section">
+            <div class="detail-label">任务背景</div>
+            <div class="detail-text">作者 Levi 是纽约中部的 Uber 司机、不会编程。平台算法什么都知道，他却对报价规律一无所知：他想把接过和拒过的报价截图与实际收入记录配到一起，弄清哪些单跑完比看上去值、哪些不值。</div>
+          </div>
+
+          <!-- 步骤 -->
+          
+      <div class="detail-section">
+        <div class="detail-label">做法步骤 (6 步)</div>
+        <ol class="steps-clean-list">
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">1.</span>
+              <span class="step-clean-text">用 GigU 自动截下每一张 Uber 报价卡（接单拒单都截），记录票价、接驾时间距离、行程时间距离、乘客评分等</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">2.</span>
+              <span class="step-clean-text">从 drivers.uber.com 按周导出收入与行程数据，并向 Uber 索取自 2020 年 2 月开车以来的历史个人数据</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">3.</span>
+              <span class="step-clean-text">把截图和数据交给 Grok Bot，说明目标：建报价与完成行程的数据库、识别重复记录、在信息足够可靠时把报价与实际行程配对</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">4.</span>
+              <span class="step-clean-text">告诉它自己的口径：车辆成本约每英里 30 美分、看重落点（别把自己扔到要空驶 30 英里回来的地方）</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">5.</span>
+              <span class="step-clean-text">建成后用自然语言提问，如哪些时段扣掉车辆成本后收入最高、哪类行程最容易拿到小费、今晚 GigU 的每英里/每小时/评分门槛怎么设</span>
+            </li>
+          
+            <li class="step-clean-item">
+              <span class="step-clean-num">6.</span>
+              <span class="step-clean-text">设 Grok Bot 定时例行：检查新截图入库存、找新的完成行程记录，持续更新</span>
+            </li>
+          
+        </ol>
+      </div>
+    
+
+          <!-- 关键提示词 -->
+          
+      <div class="detail-section">
+        <div class="detail-label">关键提示词 (Prompt)</div>
+        <div class="prompt-box">
+          <div class="prompt-bar">
+            <span>PROMPT TEMPLATE</span>
+            <button class="prompt-copy-btn" id="copyPromptBtn">复制提示词</button>
+          </div>
+          <code class="prompt-code" id="promptCode">I drive Uber in [your market]. I want to build a database that helps me make better decisions about which trips to accept, when to drive, and where to drive.</code>
+        </div>
+      </div>
+    
+
+          <!-- 产出与证据 -->
+          
+      <div class="detail-section">
+        <div class="output-callout">
+          <div class="output-callout-label">产出与证据</div>
+          <div class="output-callout-text">数据库现状（原文给出具体规模）：约 11,722 张报价截图、6,909 条较新的行程记录、2,157 条报价已与完成行程成功配对，另有覆盖 13,384 趟行程、约 300 周汇总的历史数据；作者现在出车前先问库里该时段该区域的建议再去更新 GigU 设置。</div>
+          
+        </div>
+      </div>
+    
+
+          <!-- 复现要点 -->
+          <div class="detail-section">
+            <div class="detail-label">复现要点</div>
+            <div class="detail-text">需要 Grok Bot 账号；数据侧只需 GigU 截图（2026 年内免费）加 Uber 官方导出，不需要会写代码；作者建议先攒几周报价再开建，几个月后门槛设置才有统计意义。</div>
+          </div>
+
+          <!-- 踩坑提示 -->
+          
+      <div class="detail-section">
+        <div class="pitfalls-callout">
+          <div class="pitfalls-callout-label">踩坑提示</div>
+          <div class="pitfalls-callout-text">原文提醒：截图和行程数据含敏感信息，只给 agent 限定文件夹、绝不给密码/银行截图/验证码；agent 会看错截图、配错记录或样本太小时下结论，重要结论要问样本量并回原始数据核对；别把营业额当利润，要扣车辆成本、等待和空驶。</div>
+        </div>
+      </div>
+    
+
+          <!-- 信源核对 -->
+          <div class="detail-section" style="margin-top: 6px;">
+            <div class="source-verify-box">
+              <div class="source-meta-left">
+                <span>作者/报道：<strong>Levi Spires</strong></span>
+                <span>&bull;</span>
+                <span>平台：<strong>博客</strong></span>
+                <span>&bull;</span>
+                <span>信源等级：<strong>Grade B</strong></span>
+                <span>&bull;</span><span>发布日期：2026-10-23</span>
+              </div>
+              
+                <a href="https://www.levispires.com/uber-driver-blog/algorithm-so-do-i-heres-how-to-build-your-own" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.82rem;">
+                  <span>打开原文报道</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              
+            </div>
+          </div>
+
+          <!-- 底部行动 -->
+          <div class="featured-footer" style="margin-top: 24px;">
+            <a href="../../" class="btn btn-outline">&larr; 返回查看全部 32 个实战案例</a>
+            
+              <a href="https://www.levispires.com/uber-driver-blog/algorithm-so-do-i-heres-how-to-build-your-own" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <span>访问原文报道</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <span class="footer-links-label">友情链接：</span>
+          <a href="https://www.moyunews.com/" target="_blank" rel="noopener noreferrer">摸鱼杂货店</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://muse.itis.chat/" target="_blank" rel="noopener noreferrer">Muse实战案例库</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://free.itis.chat/" target="_blank" rel="noopener noreferrer">免费开源数字资源</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://m.ucncn.cn/" target="_blank" rel="noopener noreferrer">搞钱实验室</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://doin.win/" target="_blank" rel="noopener noreferrer">小游戏大全</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://itis.chat/" target="_blank" rel="noopener noreferrer">AI资源导航</a>
+          <span class="footer-links-sep">&bull;</span>
+          <a href="https://hao.itis.chat/" target="_blank" rel="noopener noreferrer">薅羊毛日报</a>
+        </div>
+        <p class="footer-source">数据来源：Muse 空间 grok-bot-shi-zhan-an-li-ku 的 getState 结构化导出</p>
+        <p class="footer-note">严格依真实用户报道整理 · 支持本地离线与完整核验</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const copyBtn = document.getElementById('copyPromptBtn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const code = document.getElementById('promptCode').innerText;
+        navigator.clipboard.writeText(code).then(() => {
+          const t = document.getElementById('toast');
+          t.textContent = '提示词已复制到剪贴板！';
+          t.classList.add('show');
+          setTimeout(() => t.classList.remove('show'), 2000);
+        });
+      });
+    }
+  </script>
+</body>
+</html>
