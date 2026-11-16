@@ -5,7 +5,7 @@
 ## 生产环境
 - **正式域名**：`https://grokbot.itis.chat/`
 - **托管**：GitHub 仓库 `ai717/grokbot.itis.chat`（public，默认分支 `main`）+ GitHub Pages + 自定义域名（CNAME 文件已含 `grokbot.itis.chat`，DNS 由狗爸爸维护）
-- **主题**：近黑底 + 电光柠檬绿，与 Grok Bot 看板同款配色，与 Muse 站（暖纸色）区分
+- **主题**：暖亮模式（暖纸底 + 白卡片，与 Muse 站同款暖色基底），点缀色用青柠绿与 Muse 站的焦糖色区分（狗爸爸 2026-11-16 定：只要偏暖亮模式）
 
 ## 站点如何读数据（app.js，与 Muse 站同构）
 - 启动时并行 fetch `data.json`（中文）与 `data-en.json`（英文）；`/en/` 路径下用 `../` 前缀。

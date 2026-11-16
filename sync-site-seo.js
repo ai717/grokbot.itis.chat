@@ -315,7 +315,7 @@ function runSync() {
   <link rel="canonical" href="https://grokbot.itis.chat/case/${c.id}/">
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
   <link rel="apple-touch-icon" href="../../grokbot-icon.svg">
-  <meta name="theme-color" content="#0a0c0a">
+  <meta name="theme-color" content="#f5efe6">
 
 ${GA_SNIPPET}
   
