@@ -25,7 +25,7 @@ id、title、valueLine、category、difficulty（入门/进阶/高阶）、score
 - 数字纪律：标题与文案里的数字必须有 source 原文支撑。
 
 ## 同步流程（v1，与 Muse 站 v3 同款：直发 + 发后通知）
-1. 看板每周二、五 12:00 刷新后，Muse 从看板 getState 全量导出，组双语同步包；英文初稿走 Pi 免费模型，Muse 逐条核数字/链接后定版。
+1. 看板每周五 12:00 刷新后（2026-11-16 狗爸爸改定：周五一次、每期约 20 条），Muse 从看板 getState 全量导出，组双语同步包；英文初稿走 Pi 免费模型，Muse 逐条核数字/链接后定版。
 2. 组包后本地实跑仓库版 `node sync-site-seo.js`，门禁 100% 通过才发布（门禁：id 连续、中英对齐、分类白名单、必填齐全、信源完整）。
 3. 发布前复读仓库 data 文件 sha，与组包基准不一致就停下重组包，不硬推。
 4. 经 GitHub API 提交 data.json + data-en.json 到 main（优先 Git Data API 单提交，避免双语中间态）；仓库 Actions 自动跑 sync-site-seo.js 再生 fallback/详情页/sitemap 并以 bot 身份回提交；Pages 随之发布。
