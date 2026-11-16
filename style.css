@@ -429,7 +429,7 @@ body {
 
 .trending-card:hover {
   transform: translateY(-2px);
-  border-color: #cfbeab;
+  border-color: #4b5546;
   box-shadow: var(--shadow-hover);
 }
 
@@ -550,7 +550,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #e2d7c9;
+  background: #9aa48f;
   border: none;
   color: var(--text-secondary);
   display: flex;
@@ -595,7 +595,7 @@ body {
 }
 
 .fav-filter-btn:hover {
-  background: #eee6db;
+  background: #1e241e;
 }
 
 .fav-filter-btn.active {
@@ -653,9 +653,9 @@ body {
 }
 
 .cat-tab-btn:hover {
-  background: #eae0d2;
+  background: #1e241e;
   color: var(--text-title);
-  border-color: #cfbeab;
+  border-color: #4b5546;
 }
 
 .cat-tab-btn.active {
@@ -727,7 +727,7 @@ body {
 
 .case-card:hover {
   transform: translateY(-3px);
-  border-color: #bfaea0;
+  border-color: #4b5546;
   box-shadow: var(--shadow-hover);
 }
 
@@ -863,7 +863,7 @@ body {
 }
 
 .stat-tag.stat-heat {
-  color: #9a3412;
+  color: #fbbf24;
   font-weight: 700;
 }
 
@@ -984,7 +984,7 @@ body {
 }
 
 .btn-icon:hover {
-  background: #e6dcce;
+  background: #1e241e;
   color: var(--text-title);
 }
 
@@ -1099,7 +1099,7 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #8c7b6d;
+  color: #8a9484;
   margin-bottom: 8px;
   display: flex;
   align-items: center;
@@ -1113,7 +1113,7 @@ body {
 
 .modal-text, .detail-text {
   font-size: 0.94rem;
-  color: #2c241d;
+  color: #e8ede4;
   line-height: 1.74;
 }
 
@@ -1140,7 +1140,7 @@ body {
 .step-num, .step-clean-num {
   font-size: 0.85rem;
   font-weight: 850;
-  color: #8c7b6d;
+  color: #8a9484;
   min-width: 20px;
   padding-top: 1px;
   flex-shrink: 0;
@@ -1152,7 +1152,7 @@ body {
 
 .step-content, .step-clean-text {
   font-size: 0.93rem;
-  color: #2c241d;
+  color: #e8ede4;
   line-height: 1.7;
   flex: 1;
 }
@@ -1171,7 +1171,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 6px 12px;
-  background: #eae0d0;
+  background: #232a1c;
   border-bottom: 1px solid var(--border-subtle);
   font-size: 0.7rem;
   font-weight: 650;
@@ -1197,7 +1197,7 @@ body {
   padding: 12px;
   font-family: var(--font-mono);
   font-size: 0.84rem;
-  color: #78350f;
+  color: #d9f99d;
   line-height: 1.6;
   white-space: pre-wrap;
   word-break: break-word;
@@ -1254,14 +1254,14 @@ body {
 .pitfalls-callout-label {
   font-size: 0.82rem;
   font-weight: 800;
-  color: #c2410c;
+  color: #fbbf24;
   letter-spacing: 0.04em;
   margin-bottom: 6px;
   text-transform: uppercase;
 }
 
 .pitfalls-text, .pitfalls-callout-text {
-  color: #7c2d12;
+  color: #fef3c7;
   font-size: 0.92rem;
   line-height: 1.68;
 }
